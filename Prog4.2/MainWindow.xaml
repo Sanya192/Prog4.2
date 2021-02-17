@@ -1,0 +1,67 @@
+﻿<Window x:Class="Prog4._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="clr-namespace:Prog4._2.ViewModel"
+        xmlns:local="clr-namespace:Prog4._2"
+        mc:Ignorable="d"
+        Title="ViceCityInternet" Height="486" Width="377" MinWidth="351" MinHeight="394">
+    <Window.DataContext>
+        <viewmodel:ISPVIewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+     
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF16EF7"/>
+                <GradientStop Color="#FF8AC8D6" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Margin="32,43,19,24">
+            <Grid.RowDefinitions>
+                <RowDefinition  />
+                <RowDefinition />
+                <RowDefinition Height="1.05*"/>
+                <RowDefinition Height="2.3*"/>
+                <RowDefinition Height="1.2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="51*" />
+                <ColumnDefinition Width="86*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Bank Account" />
+            <Label Content="Start Date" Grid.Row="1"/>
+            <Label Content="Month" Grid.Row="2"/>
+            <Label Content="Bandwith&#xD;&#xA;" Grid.Row="3"/>
+            <TextBox  Text="{Binding Path=ActualService.BankAccount}" Grid.Column="1" Margin="0,15,0,8"/>
+            <DatePicker SelectedDate="{Binding Path=ActualService.ServiceStart}" Grid.Row="1" Grid.Column="1"/>
+            <Slider Value="{Binding Path=ActualService.ServiceLength}" Grid.Row="2" Grid.Column="1" Maximum="36"/>
+            <ListBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding AllBandwiths}"/>
+            <Button Content="Save" Height="30" Width="106" Background="#FFF0A4A4"  Grid.Row="4" >
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF0A0A"/>
+                        <GradientStop Color="#FFE27507" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+            <Button Content="Show All" Height="28"  Width="126" Background="#FFD5F9CF" Grid.Column="1" Grid.Row="4" >
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF31ECF5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

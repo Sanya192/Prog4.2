@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prog4._2.Models
 {
-    public class InternetService
+    public class InternetService :ICloneable
     {
         /// <summary>
         /// The bank account attached to service.
@@ -36,6 +36,20 @@ namespace Prog4._2.Models
         public override string ToString()
         {
             return $"{Bandwith}csomag, kezdete: {ServiceStart}, időtartam: {ServiceLength} hónap";
+        }
+
+        /// <summary>
+        /// Cloning the Internet Service.
+        /// </summary>
+        /// <returns>A different object with the same data.</returns>
+        public object Clone() {
+            InternetService temp = new InternetService(
+                BankAccount.Clone() as string,
+                ServiceStart,
+                ServiceLength,
+                Bandwith
+                ) ;
+            return temp;
         }
     }
 }

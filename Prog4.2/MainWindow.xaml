@@ -46,7 +46,7 @@
             <DatePicker SelectedDate="{Binding Path=ActualService.ServiceStart}" Grid.Row="1" Grid.Column="1"/>
             <Slider Value="{Binding Path=ActualService.ServiceLength}" Grid.Row="2" Grid.Column="1" Maximum="36"/>
             <ListBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding AllBandwiths}"/>
-            <Button Content="Save" Height="30" Width="106" Background="#FFF0A4A4"  Grid.Row="4" >
+            <Button Content="Save" Height="30" Width="106" Background="#FFF0A4A4"  Grid.Row="4" Click="Button_Click" >
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFFF0A0A"/>
@@ -54,7 +54,7 @@
                     </LinearGradientBrush>
                 </Button.BorderBrush>
             </Button>
-            <Button Content="Show All" Height="28"  Width="126" Background="#FFD5F9CF" Grid.Column="1" Grid.Row="4" >
+            <Button Content="Show All" Height="28"  Width="126" Background="#FFD5F9CF" Grid.Column="1" Grid.Row="4" Click="Button_Click_1" >
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>

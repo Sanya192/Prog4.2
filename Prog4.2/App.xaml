@@ -35,7 +35,7 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
-        <Style TargetType="local:AlphabetTextBox">
+        <Style TargetType="local:NumbersTextbox">
             <Setter Property="Margin" Value="0,15,0,8"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>

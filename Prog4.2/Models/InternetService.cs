@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prog4._2.Models
-{
-    public class InternetService :ICloneable
-    {
+namespace Prog4._2.Models {
+    public class InternetService : ICloneable {
         /// <summary>
         /// The bank account attached to service.
         /// </summary>
@@ -25,16 +23,14 @@ namespace Prog4._2.Models
         /// </summary>
         public BandwithType Bandwith { get; set; }
 
-        public InternetService(string bankAccount, DateTime serviceStart, int serviceLength, BandwithType bandwith)
-        {
+        public InternetService(string bankAccount, DateTime serviceStart, int serviceLength, BandwithType bandwith) {
             BankAccount = bankAccount;
             ServiceStart = serviceStart;
             ServiceLength = serviceLength;
             Bandwith = bandwith;
         }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return $"{Bandwith}csomag, kezdete: {ServiceStart}, időtartam: {ServiceLength} hónap";
         }
 
@@ -48,7 +44,7 @@ namespace Prog4._2.Models
                 ServiceStart,
                 ServiceLength,
                 Bandwith
-                ) ;
+                );
             return temp;
         }
     }

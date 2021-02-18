@@ -23,6 +23,7 @@ namespace Prog4._2
     /// This Program Can add new items and change the current item which will be added.
     /// This Program Cannot change the items in the list
     /// </summary>
+    ///
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -52,5 +53,5 @@ namespace Prog4._2
         }
     }
 
-    
+
 }

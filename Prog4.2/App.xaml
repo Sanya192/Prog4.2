@@ -35,10 +35,12 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
-        <Style TargetType="TextBox">
+        <Style TargetType="local:AlphabetTextBox">
             <Setter Property="Margin" Value="0,15,0,8"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="MinWidth" Value="75"/>
             <Setter Property="SelectionBrush" Value="Aqua"/>
             <Setter Property="Background" Value="#FFF5C9AA"/>
         </Style>

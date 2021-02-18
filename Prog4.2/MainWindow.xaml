@@ -11,7 +11,6 @@
         <viewmodel:ISPVIewModel/>
     </Window.DataContext>
     <Window.Resources>
-     
     </Window.Resources>
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -42,7 +41,7 @@
             <Label Content="Start Date" Grid.Row="1"/>
             <Label Content="Month" Grid.Row="2"/>
             <Label Content="Bandwith&#xD;&#xA;" Grid.Row="3"/>
-            <TextBox  Text="{Binding Path=ActualService.BankAccount}" Grid.Column="1" Margin="0,15,0,8"/>
+            <local:AlphabetTextBox  Text="{Binding Path=ActualService.BankAccount}" Grid.Column="1"/>
             <DatePicker SelectedDate="{Binding Path=ActualService.ServiceStart}" Grid.Row="1" Grid.Column="1"/>
             <Slider Value="{Binding Path=ActualService.ServiceLength}" Grid.Row="2" Grid.Column="1" Maximum="36"/>
             <ListBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding AllBandwiths}"/>
